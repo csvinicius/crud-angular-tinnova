@@ -1,0 +1,56 @@
+<header class="header">
+  <div class="image-container">
+    <img src="../../assets/logo_tinnova.png" alt="Logo Tinnova">
+  </div>
+  <div class="list-users">
+    <button (click)="router.navigate(['/users']);">Listar usuários</button>
+  </div>
+</header>
+
+<div class="container">
+  <main>
+    <form [formGroup]="newUserForm" (submit)="editMode ?  updateUser() :  addUser()">
+      <div>
+        <label>
+          Nome completo (sem abreviações)
+          <input formControlName="name" placeholder="Nome completo (sem abreviações)" />
+        </label>
+        <div class="invalid-name-message"
+          *ngIf="newUserForm.get('name')?.invalid && (newUserForm.get('name')?.dirty || newUserForm.get('name')?.touched)">
+          Por favor preencha, campo obrigatório!
+        </div>
+
+        <label>
+          E-mail
+          <input formControlName="email" placeholder="E-mail" />
+        </label>
+        <div class="invalid-email-message"
+          *ngIf="newUserForm.get('email')?.invalid && newUserForm.get('email')?.touched">
+          Por favor preencha um e-mail válido!
+        </div>
+
+        <label>
+          CPF
+          <input formControlName="cpf" placeholder="CPF" />
+        </label>
+        <div class="invalid-cpf-message" *ngIf="newUserForm.get('cpf')?.invalid && newUserForm.get('cpf')?.touched">
+          Por favor preencha um CPF válido!
+        </div>
+
+        <label>
+          Telefone
+          <input formControlName="phone" placeholder="Telefone" />
+        </label>
+        <div class="invalid-phone-message"
+          *ngIf="newUserForm.get('phone')?.invalid && newUserForm.get('phone')?.touched">
+          Por favor preencha um telefone válido!
+        </div>
+      </div>
+
+      <button class="sign-up" type="submit" [disabled]="loading || newUserForm.invalid">
+        <span *ngIf="!loading">{{editMode ? 'Salvar' :'Cadastrar'}}</span>
+        <span *ngIf="loading"><img src="../../assets/loading.gif" alt="imagem de loading"></span>
+      </button>
+    </form>
+  </main>
+</div>

@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="title">
+    <h2>Lista de usuários</h2>
+  </div>
+  <div class="sign-up">
+    <button (click)="router.navigate(['/']);">Cadastre-se</button>
+  </div>
+</header>
+
+<main class="users">
+  <ul>
+    <li *ngFor="let user of users">
+      <input type="text" [value]="user.name" disabled>
+      <input type="text" [value]="user.cpf" disabled>
+      <input type="text" [value]="user.phone" disabled>
+      <input type="text" [value]="user.email" disabled>
+  
+      <button (click)="editUser(user)">Edit</button>
+      <button (click)="deleteUser(user)">Delete</button>
+    </li>
+  </ul>
+</main>
