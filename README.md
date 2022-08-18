@@ -1,27 +1,26 @@
-# Tinnova
+## Tinnova
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+## ℹ️ Sobre
+Este projeto consiste em uma Aplicação Frontend desenvolvida em Angular que tem como objetivo realizar o CRUD (Create Read Update Delete).
+ 
+## 💡 A stack
+Para o cenário proposto, a solução escolhida para o desenvolvimento foi o framework Angular com Reactive Forms.
+ 
+## ⚙️ Instalação
+Verifique se possui o Angular CLI em sua máquina através do comando `ng version`
 
-## Development server
+Caso não possua, instalação pode ser feita seguindo a documentação oficial do Angular CLI: https://angular.io/cli
+ 
+## 💻 Stack rodando local
+Com o Angular CLI instalado, clone este repositório e entre no diretório
+``` 
+git clone git@github.com:csvinicius/crud-angular-tinnova.git &&
+cd crud-angular-tinnova
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Instale as dependências 
+``` 
+npm install
+```
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Agora basta rodar o projeto `ng serve` e acessar a url http://localhost:4200
